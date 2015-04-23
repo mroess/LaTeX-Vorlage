@@ -1,0 +1,40 @@
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+
+\input{Praeambel/praeambel.tex}
+
+%---------------------------------------------------------------------------------------------------------
+
+\titlehead{\begin{center}Kopfzeile\end{center}}
+\subject{Art der Arbeit}
+\title{Unglaublich toller Titel}
+\subtitle{Untertitel}
+\author{Autor}
+\date{Datum}
+\publishers{Betreuer:\\Betreuer}
+
+
+%---------------------------------------------------------------------------------------------------------
+
+\begin{document}
+	\maketitle
+
+	\tableofcontents
+	\newpage
+
+	\blinddocument
+	
+	%Auch nicht zitierte Werke ins Literaturverzeichnis
+	\nocite{*}
+	\printbibliography[heading=bibintoc]
+
+	%Appendix
+	\newpage
+	\appendix
+	\appendixpage
+	\addappheadtotoc
+
+\end{document}
+
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------

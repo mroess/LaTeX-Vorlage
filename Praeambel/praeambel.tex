@@ -1,0 +1,153 @@
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+
+\input glyphtounicode.tex
+\input glyphtounicode-cmr.tex
+\pdfgentounicode=1
+
+%---------------------------------------------------------------------------------------------------------
+
+%Documentclass
+\documentclass[11pt,a4paper,titlepage,parskip=half+]{scrartcl}
+\usepackage{etex}
+%Input encoding
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%Fix some little bugs
+\usepackage{fixltx2e}
+\usepackage{cmap}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Literatur
+\usepackage[%
+backend=biber,
+url=false,
+style=authoryear-icomp,
+sorting=nty,
+idemtracker=constrict,
+ibidtracker=constrict,
+pagetracker=true,
+]{biblatex}
+
+\bibliography{./Literatur/literatur}  % Bibtex-Datei wird schon in der Preambel eingebunden
+%---------------------------------------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------------------------------------
+
+%Language
+\usepackage[ngerman]{babel}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Packet for Pictures
+\usepackage{graphicx}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Packet for Appendix
+\usepackage{appendix}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Acronym
+\usepackage[printonlyused,withpage]{acronym}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Pagestyle
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+%Head- & Footline
+\setheadsepline{0.4 pt}
+\setfootsepline{0.4 pt}
+%Clear foot and header
+\clearscrheadfoot
+%Header
+\ihead[]{Innere Kopfzeile}
+%\chead[]{}
+\ohead[]{\leftmark}
+%Foot
+\cfoot[\pagemark]{\pagemark}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Colours in tables
+\usepackage{tabularx}
+\usepackage{booktabs}  
+
+%---------------------------------------------------------------------------------------------------------
+
+\usepackage[babel,german=quotes]{csquotes} 
+
+%---------------------------------------------------------------------------------------------------------
+
+%Fonts
+\usepackage[T1]{fontenc}
+%Serif font: TeX Gyre Pagella
+\usepackage{tgpagella}
+%San serif font: Lato
+\usepackage{lmodern}
+
+%---------------------------------------------------------------------------------------------------------
+\usepackage[german]{varioref}
+\usepackage{hyperxmp}
+%Hyperlinks in PDF-Document
+\usepackage{hyperref}
+\hypersetup{
+	pdfa,
+	pdflang=de,
+	pdftitle={Titel},
+    pdfauthor={Autor},
+    pdfauthortitle={},
+    pdfcopyright={Copyright (C) 2014, Autor},
+    pdfsubject={Subject},
+    pdfkeywords={Keywords},
+    %pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
+    %pdfcaptionwriter={},
+    bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan,           % color of external links
+	breaklinks
+}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Typografie
+\usepackage{ragged2e,marginnote}
+\usepackage{microtype}
+\microtypesetup{
+	activate={true,nocompatibility},
+	tracking=true,
+	kerning=true,
+	spacing=true,
+	auto=true,
+	babel=true,
+	final=true
+}
+
+\usepackage[german]{cleveref}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Anhang statt Appendix
+\addto\captionsngerman{\let\appendixtocname\appendixname%
+\let\appendixpagename\appendixname}
+
+%---------------------------------------------------------------------------------------------------------
+
+%Für den Beispieltext
+\usepackage{blindtext}
+
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
